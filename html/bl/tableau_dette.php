@@ -153,7 +153,7 @@ having dette = 0";
 
                 <!-- logo -->
                 <div class="logo">
-                    <a href="index.php">
+                    <a href="../index.php">
                         <img src="../assets/images/logo@2x.png" width="120" alt="" />
                     </a>
                 </div>
@@ -176,6 +176,9 @@ having dette = 0";
             </header>
 
 
+
+
+
             <ul id="main-menu" class="main-menu">
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
@@ -187,7 +190,7 @@ having dette = 0";
 
                 </li>
                 <li class="has-sub">
-                    <a href="layout-api.html">
+                    <a href="">
                         <i class="entypo-layout"></i>
                         <span class="title">Client</span>
                     </a>
@@ -204,36 +207,10 @@ having dette = 0";
 
 
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
 
                         <li>
-                            <a href="tableau_dette.php">
+                            <a href="bl/tableau_dette.php">
                                 <span class="title">Dettes</span>
                             </a>
                         </li>
@@ -280,6 +257,12 @@ having dette = 0";
                             </a>
                         </li>
 
+                        <li>
+                            <a href="">
+                                <span class="title">Gestion des Retours clients</span>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
                 <li class="has-sub">
@@ -302,7 +285,7 @@ having dette = 0";
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="../facture_achat/FactureAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Facture d'achat</span>
                             </a>
@@ -314,9 +297,15 @@ having dette = 0";
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="../facture_achat/journalAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des Achats</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="entypo-attach"></i>
+                                <span class="title">Gestion des Retours</span>
                             </a>
                         </li>
 
@@ -335,33 +324,7 @@ having dette = 0";
                             </a>
                         </li>
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
 
 
                     </ul>
@@ -378,8 +341,18 @@ having dette = 0";
                             </a>
                         </li>
                         <li>
+                            <a href="../articles/marque.php">
+                                <span class="title">Marque</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="">
-                                <span class="title">Famille</span>
+                                <span class="title">Emplacement</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Attributs</span>
                             </a>
                         </li>
                     </ul>
@@ -418,17 +391,13 @@ having dette = 0";
                                 <span class="title">Inventaire</span>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="">
+                                <span class="title">Mouvement des stocks</span>
+                            </a>
                         </li>
 
-
-
-
-
-
-
-
-
+                        </li>
 
 
 
@@ -440,6 +409,12 @@ having dette = 0";
 
 
             </ul>
+
+
+
+
+
+
 
         </div>
 

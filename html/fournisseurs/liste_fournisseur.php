@@ -88,7 +88,7 @@ if(isset($_SESSION['username']))
 
                 </li>
                 <li class="has-sub">
-                    <a href="layout-api.html">
+                    <a href="">
                         <i class="entypo-layout"></i>
                         <span class="title">Client</span>
                     </a>
@@ -105,36 +105,10 @@ if(isset($_SESSION['username']))
 
 
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
 
                         <li>
-                            <a href="">
+                            <a href="../bl/tableau_dette.php">
                                 <span class="title">Dettes</span>
                             </a>
                         </li>
@@ -181,6 +155,12 @@ if(isset($_SESSION['username']))
                             </a>
                         </li>
 
+                        <li>
+                            <a href="">
+                                <span class="title">Gestion des Retours clients</span>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
                 <li class="has-sub">
@@ -203,7 +183,7 @@ if(isset($_SESSION['username']))
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="facture_achat/FactureAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Facture d'achat</span>
                             </a>
@@ -215,9 +195,15 @@ if(isset($_SESSION['username']))
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="facture_achat/journalAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des Achats</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="entypo-attach"></i>
+                                <span class="title">Gestion des Retours</span>
                             </a>
                         </li>
 
@@ -231,49 +217,14 @@ if(isset($_SESSION['username']))
                     </a>
                     <ul>
                         <li>
-                            <a href="">
+                            <a href="fournisseurs/liste_fournisseur.php">
                                 <span class="title">Liste des Fournisseurs</span>
                             </a>
                         </li>
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
 
-                        <li>
-                            <a href="">
-                                <span class="title">File Upload</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span class="title">Editors</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
                 <li class="has-sub">
@@ -288,8 +239,18 @@ if(isset($_SESSION['username']))
                             </a>
                         </li>
                         <li>
+                            <a href="../articles/marque.php">
+                                <span class="title">Marque</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="">
-                                <span class="title">Famille</span>
+                                <span class="title">Emplacement</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Attributs</span>
                             </a>
                         </li>
                     </ul>
@@ -328,57 +289,19 @@ if(isset($_SESSION['username']))
                                 <span class="title">Inventaire</span>
                             </a>
                         </li>
-
-                        </li>
-
-
-
-
-
-
                         <li>
                             <a href="">
-                                <span class="title">Login</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span class="title">Register</span>
+                                <span class="title">Mouvement des stocks</span>
                             </a>
                         </li>
 
-
-
-
-
-
-
-
-
-                        <li>
-                            <a href="">
-                                <span class="title">Settings</span>
-                            </a>
                         </li>
 
 
 
 
-                        <li>
-                            <a href="">
-                                <span class="title">Nestable Lists</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span class="title">File Tree</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span class="title">Load Progress</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
 
@@ -548,7 +471,7 @@ if(isset($_SESSION['username']))
                     echo("<td><a href=\"#\" class=\"btn btn-default btn-sm btn-icon icon-left\">"
                         ."<i class=\"entypo-pencil\"></i> Modifier</a>"
 
-                        ."<a href=\"#\" class=\"btn btn-danger btn-sm btn-icon icon-left\"><i class=\"entypo-cancel\"></i>Supprimer </a>"
+                        ."<a href=\"delete.php?ref=$row[ref_fournisseur];?>\" class=\"btn btn-danger btn-sm btn-icon icon-left\"><i class=\"entypo-cancel\"></i>Supprimer </a>"
 
 
 

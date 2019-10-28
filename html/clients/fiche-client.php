@@ -38,7 +38,13 @@
 
 <body class="page-body" data-url="http://neon.dev">
 
+<?php
+session_start();
+include("../global.php");
 
+//if(isset($_SESSION['username']))
+//{
+?>
 
 <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
 
@@ -405,99 +411,194 @@
             </li>
         </ol>
 
-        <h2>Liste des clients</h2>
+
 
         <br />
 
+        <br />
 
 
         <?php
-        session_start();
+        $ref;
 
-
-        if(isset($_SESSION['username']))
+       if(isset($_SESSION['username']))
         {
-
-
-        if (isset($_GET['ref_client'])&& isset($_GET['societe']) )
-        {
-            $ref_client=$_GET['ref_client'];
-            $Societe=$_GET['societe'];
-// $Societe_officielle=$_GET['societe_officielle'];
-            $telephone=$_GET['telephone'];
-// $fax=$_GET['fax'];
-            $mobile=$_GET['mobile'];
-// $email=$_GET['email'];
-            $adresse=$_GET['adresse'];
-// $num_registe=$_GET['num_registe'];
-// $carte_fiscale=$_GET['carte_fiscale'];
-// $num_art=$_GET['num_art'];
-// $compte_bancaire=$_GET['compte'];
-// $ccp=$_GET['ccp'];
-            $dette=$_GET['dette'];
-            if(isset($_GET['ville']))
-                $ville= $_GET['ville'];
-
-            if(isset($_GET['wilaya']))
-                $wilaya=$_GET['wilaya'];
-
-
-            include("../global.php");
-            $requete="update clients
-set  
-Societe='".$Societe."',
- telephone_fix='".$telephone."', 
-
- T_Mobile='".$mobile."',
-
- adresse_activite='".$adresse."',
-
- wilaya='$wilaya',
- ville='$ville',
-
- dette='".$dette."'
-where ref_client  = '".$ref_client."'";
-
-            $resultat = mysqli_query($link,$requete) or die(mysqli_error($link));
-            if($resultat)
-            {
-                echo "Modification faite avec succées";
-            }
-            else{
-                echo "<center><span>La modification na pas été éffectuée</center>";
-
-
-            }
-        }else
-            echo 'Nom du Client introuvable';
 
         ?>
 
 
 
+       <h3 align="center">Fiche Client </h3>
+        <br /><br />
+        <?php
+        $ref_client;
+        $link = mysqli_connect("localhost", "root", "", "dap2");
+       if (isset($_GET['ref_client']))
+        {
 
-        <br />
-
-
-
-
-            <?php
-        }
-        else
-           header("Location:../login.php");
+        //include("../global.php");
+        $ref_client=$_GET['ref_client'];
+        $req= mysqli_query($link,"select * from clients where ref_client = '$ref_client'");
+        $num = mysqli_num_rows($req);
+        if($num)
+        {
+        while($row= mysqli_fetch_array($req))
+        {
         ?>
 
+        <form action ="update-clients.php" method="GET">
+            <center>
+                <table  border = "2">
+
+
+
+                    <tr class="tr-gauche">
+                        <td class="td-gauche">
+                            Nom
+                        </td>
+                        <td class="td-point">:</td>
+                        <td class="td-client">
+                            <input  name = "ref_client" type = "hidden"  value="<?php echo("".$ref_client);?>"
+                            />
+                            <input autocomplete="off" name = "societe" type = "text" class = "input-table" value="
+<?php
+
+                            echo($row['Societe']);
+                            ?>
+" />
+
+
+                        </td>
+                        <td class="td-point">*</td>
+                    </tr>
+
+
+                    <tr class="tr-gauche">
+                        <td class="td-gauche">
+                            1 ere Dette
+                        </td>
+                        <td class="td-point">:</td>
+                        <td class="td-client">
+                            <input autocomplete="off" name = "dette" type = "text" class = "input-table" value="
+<?php echo($row['dette']); ?>" />
+                        </td>
+                        <td class="td-point">*</td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="td-gauche">
+                            Telephone
+                        </td>
+                        <td class="td-point">:</td>
+                        <td class="td-client">
+
+
+
+
+                            <input autocomplete="off" name = "telephone" class = "input-table" type = "text" value="
+<?php
+                            echo($row['telephone_fix']);?>
+"/>
+
+                        </td>
+                        <td class="td-point">&nbsp; </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="td-gauche"> T.Portable
+                        </td>
+                        <td class="td-point">:</td>
+                        <td class="td-client" >
+
+                            <input autocomplete="off" name = "mobile" class = "input-table" type = "text" value="
+<?php
+                            echo($row['T_Mobile']);
+                            ?>"/>
+
+                        </td>
+                        <td class="td-point" >&nbsp; </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-gauche">
+                            Adresse
+                        </td>
+                        <td class="td-point">:</td>
+                        <td class="td-client" >
+
+
+                            <input autocomplete="off" name = "adresse" class = "input-table" type = "text" value="
+<?php
+                            echo($row['adresse_activite']);
+                            ?>"/>
+
+                        </td>
+                        <td class="td-point" >*</td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="td-gauche">
+                            Ville
+                        </td>
+                        <td class="td-point">:
+                        </td>
+                        <td class="td-client" >
+                            <input autocomplete="off" name = "ville" class = "input-table" type = "text" value="<?php echo("".$row['Ville']); ?>"/>
+                        </td>
+                        <td class="td-point" >*</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-gauche">
+                            Wilaya </td>
+                        <td class="td-point">:
+                        </td>
+                        <td class="td-client" >
+                            <input autocomplete="off" name = "wilaya" class = "input-table" type = "text" value="<?php echo("".$row['Wilaya']); ?>"/>
+                        </td>
+                        <td class="td-point" >*</td>
+                    </tr>
 
 
 
 
 
-        <br />
+
+                    <tr>
+                        <td>
+                        </td><td>
+                        </td>
+                        <td>
+                            <input name = "modifier" type= "submit" style="width:120px; height:40px;"value = "Mise a Jour" />
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+
+            </center>
+            <!-- end .content -->
+        </form>
+    <?php
+    }
+    }
+    }
+
+    }
+    else
+       // header("Location:../login.php");
 
 
-
-        <br />
-        <br />
+    //}
+    ?>
+</div>
+</div>
+<!-- end .container -->
 
 
 

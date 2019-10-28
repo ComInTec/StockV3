@@ -62,7 +62,7 @@ $date= date("d/m/Y");
 
                 <!-- logo -->
                 <div class="logo">
-                    <a href="index.php">
+                    <a href="">
                         <img src="assets/images/logo@2x.png" width="120" alt="" />
                     </a>
                 </div>
@@ -89,16 +89,16 @@ $date= date("d/m/Y");
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
                 <li class="active opened active has-sub">
-                    <a href="index.php">
-                        <i class="entypo-gauge"></i>
+                    <a href="">
+                        <i class="entypo-home"></i>
                         <span class="title">Acceuil</span>
                     </a>
 
                 </li>
                 <li class="has-sub">
                     <a href="">
-                        <i class="entypo-layout"></i>
-                        <span class="title">Client</span>
+                        <i class="entypo-users"></i>
+                        <span class="title">Clients</span>
                     </a>
                     <ul>
                         <li>
@@ -113,36 +113,11 @@ $date= date("d/m/Y");
 
 
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
 
                         <li>
                             <a href="bl/tableau_dette.php">
+                                <i class="entypo-list"></i>
                                 <span class="title">Dettes</span>
                             </a>
                         </li>
@@ -153,7 +128,7 @@ $date= date("d/m/Y");
 
                 <li class="has-sub">
                     <a href="">
-                        <i class="entypo-newspaper"></i>
+                        <i class="entypo-paypal"></i>
                         <span class="title">Ventes</span>
                     </a>
                     <ul>
@@ -199,7 +174,7 @@ $date= date("d/m/Y");
                 </li>
                 <li class="has-sub">
                     <a href="">
-                        <i class="entypo-mail"></i>
+                        <i class="glyphicon glyphicon-xbt"></i>
                         <span class="title">Achats</span>
 
                     </a>
@@ -246,7 +221,7 @@ $date= date("d/m/Y");
 
                 <li class="has-sub">
                     <a href="">
-                        <i class="entypo-doc-text"></i>
+                        <i class="entypo-user"></i>
                         <span class="title">Fournisseurs</span>
                     </a>
                     <ul>
@@ -256,46 +231,19 @@ $date= date("d/m/Y");
                             </a>
                         </li>
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
 
 
 
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="">
-                        <i class="entypo-window"></i>
+                    <a href="articles/produit.php">
+                        <i class="glyphicon glyphicon-qrcode"></i>
                         <span class="title">Articles</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="">
+                            <a href="articles/categorie.php">
                                 <span class="title">Catégorie</span>
                             </a>
                         </li>
@@ -366,6 +314,46 @@ $date= date("d/m/Y");
                     </ul>
                 </li>
 
+
+
+                <li class="active opened active has-sub">
+                    <a href="company/index.php">
+                        <i class="entypo-info"></i>
+                        <span class="title">Informations Entreprise</span>
+                    </a>
+
+                </li>
+
+                <li class="active opened active has-sub">
+                    <a href="">
+                        <i class="glyphicon glyphicon-lock"></i>
+                        <span class="title">Coffre</span>
+                    </a>
+
+                </li>
+
+                <li class="active opened active has-sub">
+                    <a href="">
+                        <i class="entypo-info"></i>
+                        <span class="title">Charges</span>
+                    </a>
+
+                </li>
+
+                <li class="active opened active has-sub">
+                    <a href="">
+                        <i class="entypo-info"></i>
+                        <span class="title">Utilisateurs</span>
+                    </a>
+
+                </li>
+                <li class="active opened active has-sub">
+                    <a href="">
+                        <i class="entypo-info"></i>
+                        <span class="title">Deconnection</span>
+                    </a>
+
+                </li>
 
             </ul>
 

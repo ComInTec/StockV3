@@ -505,11 +505,11 @@ VALUES (
 
         <ol class="breadcrumb bc-3" >
             <li>
-                <a href="index.php"><i class="fa-home"></i>Acceuil</a>
+                <a href="../index.php"><i class="fa-home"></i>Acceuil</a>
             </li>
             <li>
 
-                <a href="tables-main.html">Clients</a>
+                <a href="clients/liste_clients">Clients</a>
             </li>
             <li class="active">
 

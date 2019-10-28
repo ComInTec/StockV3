@@ -93,20 +93,20 @@ $ref='';
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
                 <li class="active opened active has-sub">
-                    <a href="../index.php">
+                    <a href="index.php">
                         <i class="entypo-gauge"></i>
                         <span class="title">Acceuil</span>
                     </a>
 
                 </li>
                 <li class="has-sub">
-                    <a href="layout-api.html">
+                    <a href="">
                         <i class="entypo-layout"></i>
                         <span class="title">Client</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="clients/liste_client.php">
+                            <a href="../clients/liste_client.php">
                                 <span class="title">Liste des Clients</span>
                             </a>
                         </li>
@@ -117,36 +117,10 @@ $ref='';
 
 
 
-                        <li class="has-sub">
-                            <a href="layout-page-transition-fade.html">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="layout-page-transition-fade.html">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout-page-transition-left-in.html">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout-page-transition-right-in.html">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout-page-transition-fade-only.html">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
 
                         <li>
-                            <a href="layout-fixed-sidebar.html">
+                            <a href="../bl/tableau_dette.php">
                                 <span class="title">Dettes</span>
                             </a>
                         </li>
@@ -156,80 +130,92 @@ $ref='';
                 </li>
 
                 <li class="has-sub">
-                    <a href="ui-panels.html">
+                    <a href="">
                         <i class="entypo-newspaper"></i>
                         <span class="title">Ventes</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="ui-panels.html">
+                            <a href="">
                                 <span class="title">Bon de route</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-panels.html">
+                            <a href="">
                                 <span class="title">Commande Client</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-tiles.html">
+                            <a href="">
                                 <span class="title">Facture Client</span>
                             </a>
                         </li>
                         <li>
-                            <a href="forms-buttons.html">
+                            <a href="">
                                 <span class="title">Bon de livraison</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-typography.html">
+                            <a href="">
                                 <span class="title">Journal des Commandes</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="ui-typography.html">
+                            <a href="">
                                 <span class="title">Journal des Ventes</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <span class="title">Gestion des Retours clients</span>
                             </a>
                         </li>
 
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="mailbox.html">
+                    <a href="">
                         <i class="entypo-mail"></i>
                         <span class="title">Achats</span>
 
                     </a>
                     <ul>
                         <li>
-                            <a href="mailbox.html">
+                            <a href="">
                                 <i class="entypo-inbox"></i>
                                 <span class="title">Bon de Commande</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-compose.html">
+                            <a href="">
                                 <i class="entypo-pencil"></i>
                                 <span class="title">Bon de Réception</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="facture_achat/FactureAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Facture d'achat</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des commandes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="facture_achat/journalAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des Achats</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="entypo-attach"></i>
+                                <span class="title">Gestion des Retours</span>
                             </a>
                         </li>
 
@@ -237,160 +223,97 @@ $ref='';
                 </li>
 
                 <li class="has-sub">
-                    <a href="forms-main.html">
+                    <a href="">
                         <i class="entypo-doc-text"></i>
                         <span class="title">Fournisseurs</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="../fournisseurs/liste_fournisseur.php">
+                            <a href="fournisseurs/liste_fournisseur.php">
                                 <span class="title">Liste des Fournisseurs</span>
                             </a>
                         </li>
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
 
-                        <li>
-                            <a href="forms-file-upload.html">
-                                <span class="title">File Upload</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="forms-wysiwyg.html">
-                                <span class="title">Editors</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="tables-main.html">
+                    <a href="">
                         <i class="entypo-window"></i>
                         <span class="title">Articles</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="tables-main.html">
+                            <a href="">
                                 <span class="title">Catégorie</span>
                             </a>
                         </li>
                         <li>
-                            <a href="tables-datatable.html">
-                                <span class="title">Famille</span>
+                            <a href="../articles/marque.php">
+                                <span class="title">Marque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Emplacement</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Attributs</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="extra-icons.html">
+                    <a href="">
                         <i class="entypo-bag"></i>
                         <span class="title">Stock</span>
                         <span class="badge badge-info badge-roundless">New Items</span>
                     </a>
                     <ul>
                         <li class="has-sub">
-                            <a href="extra-icons.html">
+                            <a href="">
                                 <span class="title">Stock par dépot</span>
                                 <span class="badge badge-success">3</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="extra-icons.html">
+                            <a href="">
                                 <span class="title">Bon d'entree</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-entypo.html">
+                            <a href="">
                                 <span class="title">Bon de sortie</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-glyphicons.html">
+                            <a href="">
                                 <span class="title">Bon de renvoi</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-glyphicons.html">
+                            <a href="">
                                 <span class="title">Inventaire</span>
                             </a>
                         </li>
-
-                        </li>
-
-
-
-
-
-
                         <li>
-                            <a href="extra-login.html">
-                                <span class="title">Login</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-register.html">
-                                <span class="title">Register</span>
+                            <a href="">
+                                <span class="title">Mouvement des stocks</span>
                             </a>
                         </li>
 
-
-
-
-
-
-
-
-
-                        <li>
-                            <a href="extra-settings.html">
-                                <span class="title">Settings</span>
-                            </a>
                         </li>
 
 
 
 
-                        <li>
-                            <a href="extra-nestable.html">
-                                <span class="title">Nestable Lists</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-file-tree.html">
-                                <span class="title">File Tree</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-load-progress.html">
-                                <span class="title">Load Progress</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
 
@@ -409,15 +332,15 @@ $ref='';
 
         <ol class="breadcrumb bc-3" >
             <li>
-                <a href="index.php"><i class="fa-home"></i>Acceuil</a>
+                <a href="../index.php"><i class="fa-home"></i>Acceuil</a>
             </li>
             <li>
 
-                <a href="tables-main.html">Clients</a>
+                <a href="liste_founrnisseur.html">Fournisseurs</a>
             </li>
             <li class="active">
 
-                <strong>Liste des Clients</strong>
+                <strong>Ajouter Fournisseur</strong>
             </li>
         </ol>
 

@@ -1,11 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Logiciel De Stock - Authentification</title>
-    <link rel="stylesheet" type="text/css" href="design/login.css"/>
-    <script type="text/javascript" src="design/jquery.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Neon Admin Panel" />
+    <meta name="author" content="" />
+
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <title>Gestion Commercial | Login</title>
+
+    <link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/neon-core.css">
+    <link rel="stylesheet" href="assets/css/neon-theme.css">
+    <link rel="stylesheet" href="assets/css/neon-forms.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <script type="text/javascript">
         function startup() {
             $("#wrapper").fadeIn(500);
@@ -15,7 +40,12 @@
     $system_id = "";
     ?>
 </head>
-<body onload="startup()">
+<body class="page-body login-page login-form-fall" data-url="http://neon.dev" onload="startup()">
+
+
+
+
+
 <div id="wrong pass">
     <?php
     $able = 0;
@@ -81,31 +111,140 @@
     }
     ?>
 </div>
-<div id="wrapper">
-    <center>
-    </center>
-    <form name="login-form" class="login-form" action="login.php" method="GET">
-        <div class="header">
-            <h1>&nbsp;</h1>
-            <h1>&nbsp;</h1>
-            <h1>Authentification </h1>
+
+
+
+
+<!-- This is needed when you send requests via Ajax -->
+<script type="text/javascript">
+    var baseurl = '';
+</script>
+
+<div class="login-container">
+
+    <div class="login-header login-caret">
+
+        <div class="login-content">
+
+            <a href="index.php" class="logo">
+                <img src="assets/images/logo@2x.png" width="120" alt="" />
+            </a>
+
+            <p class="description">Cher Utilisateur,Connectez-Vous pour acceder à votre compte Administrateur</p>
+
+            <!-- progress bar indicator -->
+            <div class="login-progressbar-indicator">
+                <h3>43%</h3>
+                <span>logging in...</span>
+            </div>
         </div>
-        <div class="content">
-            <input name="usr_email" type="text" autocomplete="off" autofocus="autofocus" class="input username"
-                   placeholder="Utilisateur"/>
-            <div class="user-icon"></div>
-            <input name="pwd" type="password" class="input password" autocomplete="off" placeholder="Mot de Passe"/>
-            <div class="pass-icon"></div>
+
+    </div>
+
+    <div class="login-progressbar">
+        <div></div>
+    </div>
+
+    <div class="login-form" id="wrapper">
+
+        <div class="login-content">
+
+
+
+
+                <form name="login-form" class="login-form" action="login.php" method="GET" role="form" >
+                <div class="form-group">
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="entypo-user"></i>
+                        </div>
+
+                        <input type="text" class="form-control" name="usr_email"  id="username" placeholder="Utilisateur" autocomplete="off" />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="entypo-key"></i>
+                        </div>
+
+                        <input type="password" class="form-control" name="pwd" id="password" placeholder="Mot de Passe" autocomplete="off" />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block btn-login" name="doLogin"  id="doLogin3" >
+
+                        <i class="entypo-login"></i>
+                        Connecter
+                    </button>
+                </div>
+
+
+
+                <!--
+
+                You can also use other social network buttons
+                <div class="form-group">
+
+                    <button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left twitter-button">
+                        Login with Twitter
+                        <i class="entypo-twitter"></i>
+                    </button>
+
+                </div>
+
+                <div class="form-group">
+
+                    <button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left google-button">
+                        Login with Google+
+                        <i class="entypo-gplus"></i>
+                    </button>
+
+                </div> -->
+
+            </form>
+
+
+            <div class="login-bottom-links">
+
+                <a href="" class="link">Mot de passe oublié ?</a>
+
+                <br />
+
+
+
+            </div>
+
         </div>
-        <div class="footer">
-            <input type="submit" name="doLogin" id="doLogin3" value="Connecter" class="button"/>
-            <!-- <input type="submit" name="doLogin" id="forgot" value="Forgot" class="register" /> -->
-            <!--		<input type="BUTTON" value="reset password" class="register" onclick="window.location.href='forgot.php'" />
-            -->
-        </div>
-        <br/>
-    </form>
-    <div class="gradient"></div>
+
+    </div>
+
 </div>
+
+
+<!-- Bottom scripts (common) -->
+<script src="assets/js/gsap/TweenMax.min.js"></script>
+<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/joinable.js"></script>
+<script src="assets/js/resizeable.js"></script>
+<script src="assets/js/neon-api.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/neon-login.js"></script>
+
+
+<!-- JavaScripts initializations and stuff -->
+<script src="assets/js/neon-custom.js"></script>
+
+
+<!-- Demo Settings -->
+<script src="assets/js/neon-demo.js"></script>
+
 </body>
 </html>

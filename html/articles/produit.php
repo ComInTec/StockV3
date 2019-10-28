@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+
+
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,22 +11,21 @@
     <meta name="description" content="Neon Admin Panel" />
     <meta name="author" content="" />
 
-    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="icon" href="../assets/images/favicon.ico">
 
-    <title>Gestion Commercial |Clients </title>
+    <title>Gestion Commerciale</title>
 
-    <link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
-    <link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+    <link rel="stylesheet" href="../assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="../assets/css/font-icons/entypo/css/entypo.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/neon-core.css">
-    <link rel="stylesheet" href="assets/css/neon-theme.css">
-    <link rel="stylesheet" href="assets/css/neon-forms.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/neon-core.css">
+    <link rel="stylesheet" href="../assets/css/neon-theme.css">
+    <link rel="stylesheet" href="../assets/css/neon-forms.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
 
-    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
 
-    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,14 +35,26 @@
 
 
 </head>
+<body class="page-body  page-fade gray" data-url="http://neon.dev">
+
+<?php
+include("../global.php");
+
+session_start();
+if(isset($_SESSION['username']))
+{
+?>
 
 
 
-<body class="page-body" data-url="http://neon.dev">
+
+
 
 
 
 <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+
 
     <div class="sidebar-menu">
 
@@ -51,7 +65,7 @@
                 <!-- logo -->
                 <div class="logo">
                     <a href="index.php">
-                        <img src="assets/images/logo@2x.png" width="120" alt="" />
+                        <img src="../assets/images/logo@2x.png" width="120" alt="" />
                     </a>
                 </div>
 
@@ -77,7 +91,7 @@
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
                 <li class="active opened active has-sub">
-                    <a href="../index.php">
+                    <a href="index.php">
                         <i class="entypo-gauge"></i>
                         <span class="title">Acceuil</span>
                     </a>
@@ -102,27 +116,27 @@
 
 
                         <li class="has-sub">
-                            <a href="layout-page-transition-fade.html">
+                            <a href="">
                                 <span class="title">Edition</span>
                             </a>
                             <ul>
                                 <li>
-                                    <a href="layout-page-transition-fade.html">
+                                    <a href="">
                                         <span class="title">Nouveau</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="layout-page-transition-left-in.html">
+                                    <a href="">
                                         <span class="title">Modifier</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="layout-page-transition-right-in.html">
+                                    <a href="">
                                         <span class="title">Supprimer</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="layout-page-transition-fade-only.html">
+                                    <a href="">
                                         <span class="title">Imprimer</span>
                                     </a>
                                 </li>
@@ -130,7 +144,7 @@
                         </li>
 
                         <li>
-                            <a href="../bl/tableau_dette.php">
+                            <a href="bl/tableau_dette.php">
                                 <span class="title">Dettes</span>
                             </a>
                         </li>
@@ -140,80 +154,92 @@
                 </li>
 
                 <li class="has-sub">
-                    <a href="ui-panels.html">
+                    <a href="">
                         <i class="entypo-newspaper"></i>
                         <span class="title">Ventes</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="ui-panels.html">
+                            <a href="">
                                 <span class="title">Bon de route</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-panels.html">
+                            <a href="">
                                 <span class="title">Commande Client</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-tiles.html">
+                            <a href="">
                                 <span class="title">Facture Client</span>
                             </a>
                         </li>
                         <li>
-                            <a href="forms-buttons.html">
+                            <a href="">
                                 <span class="title">Bon de livraison</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-typography.html">
+                            <a href="">
                                 <span class="title">Journal des Commandes</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="ui-typography.html">
+                            <a href="">
                                 <span class="title">Journal des Ventes</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <span class="title">Gestion des Retours clients</span>
                             </a>
                         </li>
 
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="mailbox.html">
+                    <a href="">
                         <i class="entypo-mail"></i>
                         <span class="title">Achats</span>
 
                     </a>
                     <ul>
                         <li>
-                            <a href="mailbox.html">
+                            <a href="">
                                 <i class="entypo-inbox"></i>
                                 <span class="title">Bon de Commande</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-compose.html">
+                            <a href="">
                                 <i class="entypo-pencil"></i>
                                 <span class="title">Bon de Réception</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="facture_achat/FactureAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Facture d'achat</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des commandes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="facture_achat/journalAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des Achats</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="entypo-attach"></i>
+                                <span class="title">Gestion des Retours</span>
                             </a>
                         </li>
 
@@ -221,13 +247,13 @@
                 </li>
 
                 <li class="has-sub">
-                    <a href="forms-main.html">
+                    <a href="">
                         <i class="entypo-doc-text"></i>
                         <span class="title">Fournisseurs</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="../fournisseurs/liste_fournisseur.php">
+                            <a href="fournisseurs/liste_fournisseur.php">
                                 <span class="title">Liste des Fournisseurs</span>
                             </a>
                         </li>
@@ -260,121 +286,85 @@
                             </ul>
                         </li>
 
-                        <li>
-                            <a href="forms-file-upload.html">
-                                <span class="title">File Upload</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="forms-wysiwyg.html">
-                                <span class="title">Editors</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="tables-main.html">
+                    <a href="">
                         <i class="entypo-window"></i>
                         <span class="title">Articles</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="tables-main.html">
+                            <a href="">
                                 <span class="title">Catégorie</span>
                             </a>
                         </li>
                         <li>
-                            <a href="tables-datatable.html">
-                                <span class="title">Famille</span>
+                            <a href="articles/marque.php">
+                                <span class="title">Marque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Emplacement</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Attributs</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="extra-icons.html">
+                    <a href="">
                         <i class="entypo-bag"></i>
                         <span class="title">Stock</span>
                         <span class="badge badge-info badge-roundless">New Items</span>
                     </a>
                     <ul>
                         <li class="has-sub">
-                            <a href="extra-icons.html">
+                            <a href="">
                                 <span class="title">Stock par dépot</span>
                                 <span class="badge badge-success">3</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="extra-icons.html">
+                            <a href="">
                                 <span class="title">Bon d'entree</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-entypo.html">
+                            <a href="">
                                 <span class="title">Bon de sortie</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-glyphicons.html">
+                            <a href="">
                                 <span class="title">Bon de renvoi</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-glyphicons.html">
+                            <a href="">
                                 <span class="title">Inventaire</span>
                             </a>
                         </li>
-
-                        </li>
-
-
-
-
-
-
                         <li>
-                            <a href="extra-login.html">
-                                <span class="title">Login</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-register.html">
-                                <span class="title">Register</span>
+                            <a href="">
+                                <span class="title">Mouvement des stocks</span>
                             </a>
                         </li>
 
-
-
-
-
-
-
-
-
-                        <li>
-                            <a href="extra-settings.html">
-                                <span class="title">Settings</span>
-                            </a>
                         </li>
 
 
 
 
-                        <li>
-                            <a href="extra-nestable.html">
-                                <span class="title">Nestable Lists</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-file-tree.html">
-                                <span class="title">File Tree</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-load-progress.html">
-                                <span class="title">Load Progress</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
 
@@ -385,154 +375,177 @@
 
     </div>
 
-    <div class="main-content">
+    <br class="main-content">
+
+    <ol class="breadcrumb bc-3" >
+        <li>
+            <a href="index.html"><i class="fa-home"></i>Acceuil</a>
+        </li>
+        <li>
+
+            <a href="">Article</a>
+        </li>
+        <li class="active">
+
+            <strong>Marques</strong>
+        </li>
+    </ol>
+
+    <br/>
+    <br/>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Nom</label>
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Active</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-default">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center" >
+        <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Ajouter une marque</a>
+    </div>
 
 
 
-        <hr />
+    <div id="table-3_wrapper" class="dataTables dataTables_wrapper" >
+        <?php
+        /* Attempt MySQL server connection. Assuming you are running MySQL
+        server with default setting (user 'root' with no password) */
+        $link = mysqli_connect("localhost", "root", "", "dap2");
 
-        <ol class="breadcrumb bc-3" >
-            <li>
-                <a href="index.php"><i class="fa-home"></i>Acceuil</a>
-            </li>
-            <li>
+        // Check connection
+        if($link === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
 
-                <a href="">Clients</a>
-            </li>
-            <li class="active">
+        // Attempt select query execution
+        $sql = "SELECT * FROM categorie";
+        if($result = mysqli_query($link, $sql)){
+            if(mysqli_num_rows($result) > 0){
 
-                <strong>Liste des Clients</strong>
-            </li>
-        </ol>
+                echo "<table class=\"table table-bordered table-striped datatable\" id=\"table-2\">";
+                echo " <thead>
+            <tr>
+                <th>
+                    <div class=\"checkbox checkbox-replace\">
+                        <input type=\"checkbox\" id=\"chk-1\">
+                    </div>
+                </th>";
 
-        <h2>Liste des clients</h2>
 
-        <br />
+                echo " <th>Nom</th> ";
+                echo "<th>Statut</th>";
+                echo "<th>Action</th>";
+                echo "</tr>";
+                echo"</thead>" ;
+                $i=0 ;
+                while($row = mysqli_fetch_array($result)){
+
+                    echo "<tr>";
+                    echo"<td>
+                    <div class=\"checkbox checkbox-replace\">
+                        <input type=\"checkbox\" id=\"chk-1\">
+                    </div>
+                </td>" ;
+                    echo "<td >" . $row['nom'] . "</td>";
+                    echo "<td>" . $row['active'] . "</td>";
 
 
+                    echo("<td><a href=\"#\" class=\"btn btn-default btn-sm btn-icon icon-left\">"
+                        ."<i class=\"entypo-pencil\"></i> Modifier</a>"
+
+                        ."<a href=\"#\" class=\"btn btn-danger btn-sm btn-icon icon-left\"><i class=\"entypo-cancel\"></i>Supprimer </a>"
+
+
+
+
+
+
+
+
+
+
+
+                        ."</td>");
+                    $i++ ;
+
+                    echo "</tr>";
+
+
+                }
+
+
+                echo "</table>";
+                // Free result set
+                mysqli_free_result($result);
+            } else{
+                echo "No records matching your query were found.";
+            }
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+
+        // Close connection
+        mysqli_close($link);
+        ?>
 
         <?php
-        session_start();
-
-
-        if(isset($_SESSION['username']))
-        {
-
-
-        if (isset($_GET['ref_client'])&& isset($_GET['societe']) )
-        {
-            $ref_client=$_GET['ref_client'];
-            $Societe=$_GET['societe'];
-// $Societe_officielle=$_GET['societe_officielle'];
-            $telephone=$_GET['telephone'];
-// $fax=$_GET['fax'];
-            $mobile=$_GET['mobile'];
-// $email=$_GET['email'];
-            $adresse=$_GET['adresse'];
-// $num_registe=$_GET['num_registe'];
-// $carte_fiscale=$_GET['carte_fiscale'];
-// $num_art=$_GET['num_art'];
-// $compte_bancaire=$_GET['compte'];
-// $ccp=$_GET['ccp'];
-            $dette=$_GET['dette'];
-            if(isset($_GET['ville']))
-                $ville= $_GET['ville'];
-
-            if(isset($_GET['wilaya']))
-                $wilaya=$_GET['wilaya'];
-
-
-            include("../global.php");
-            $requete="update clients
-set  
-Societe='".$Societe."',
- telephone_fix='".$telephone."', 
-
- T_Mobile='".$mobile."',
-
- adresse_activite='".$adresse."',
-
- wilaya='$wilaya',
- ville='$ville',
-
- dette='".$dette."'
-where ref_client  = '".$ref_client."'";
-
-            $resultat = mysqli_query($link,$requete) or die(mysqli_error($link));
-            if($resultat)
-            {
-                echo "Modification faite avec succées";
-            }
-            else{
-                echo "<center><span>La modification na pas été éffectuée</center>";
-
-
-            }
         }else
-            echo 'Nom du Client introuvable';
+
+            header("Location:../login.php");
 
         ?>
 
 
 
 
-        <br />
 
 
-
-
-            <?php
-        }
-        else
-           header("Location:../login.php");
-        ?>
-
-
-
-
-
-
-        <br />
-
-
-
-        <br />
-        <br />
-
-
-
-
-
-
-
-
-
-
-        <br />
-
-
-
-
-        <br />
-        <!-- Footer -->
-        <footer class="main">
-
-            &copy; 2019 <strong>ComInTec</strong>  <a href="http://laborator.co" target="_blank">Bureau de consulting et formation en Informatique</a>
-
-        </footer>
     </div>
 
 
 
 
-
-    <!-- Chat Histories -->
-
+    <hr />
 
 
 
 
-    <!-- Chat Histories -->
+
+
+
+
+    <br />
+
+
+
+    <br />
 
 
 
@@ -542,32 +555,82 @@ where ref_client  = '".$ref_client."'";
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="main">
+
+    &copy; 2019 <strong>ComInTec</strong> Bureau de consulting et formation en Informatiue <a href="" target="_blank"> ComInTec</a>
+
+</footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Imported styles on this page -->
-<link rel="stylesheet" href="assets/js/datatables/datatables.css">
-<link rel="stylesheet" href="assets/js/select2/select2-bootstrap.css">
-<link rel="stylesheet" href="assets/js/select2/select2.css">
+<link rel="stylesheet" href="../assets/js/jvectormap/jquery-jvectormap-1.2.2.css">
+<link rel="stylesheet" href="../assets/js/rickshaw/rickshaw.min.css">
 
 <!-- Bottom scripts (common) -->
-<script src="assets/js/gsap/TweenMax.min.js"></script>
-<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/joinable.js"></script>
-<script src="assets/js/resizeable.js"></script>
-<script src="assets/js/neon-api.js"></script>
+<script src="../assets/js/gsap/TweenMax.min.js"></script>
+<script src="../assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/joinable.js"></script>
+<script src="../assets/js/resizeable.js"></script>
+<script src="../assets/js/neon-api.js"></script>
+<script src="../assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 
 
 <!-- Imported scripts on this page -->
-<script src="assets/js/datatables/datatables.js"></script>
-<script src="assets/js/select2/select2.min.js"></script>
-<script src="assets/js/neon-chat.js"></script>
+<script src="../assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
+<script src="../assets/js/jquery.sparkline.min.js"></script>
+<script src="../assets/js/rickshaw/vendor/d3.v3.js"></script>
+<script src="../assets/js/rickshaw/rickshaw.min.js"></script>
+<script src="../assets/js/raphael-min.js"></script>
+<script src="../assets/js/morris.min.js"></script>
+<script src="../assets/js/toastr.js"></script>
+<script src="../assets/js/fullcalendar/fullcalendar.min.js"></script>
+<script src="../assets/js/neon-chat.js"></script>
 
 
 <!-- JavaScripts initializations and stuff -->
-<script src="assets/js/neon-custom.js"></script>
+<script src="../assets/js/neon-custom.js"></script>
 
 
 <!-- Demo Settings -->
-<script src="assets/js/neon-demo.js"></script>
+<script src="../assets/js/neon-demo.js"></script>
 
 </body>
 </html>

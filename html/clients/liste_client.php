@@ -47,7 +47,8 @@ if(isset($_SESSION['username']))
 ?>
 
 
-<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+<div class="page-container" id="page" >
+    <!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
 
     <div class="sidebar-menu">
 
@@ -57,14 +58,15 @@ if(isset($_SESSION['username']))
 
                 <!-- logo -->
                 <div class="logo">
-                    <a href="index.php">
-                        <img src="assets/images/logo@2x.png" width="120" alt="" />
+                    <a href="../index.php">
+                        <img src="assets/images/logo@2x.png" width="120" alt=""/>
                     </a>
                 </div>
 
                 <!-- logo collapse icon -->
                 <div class="sidebar-collapse">
-                    <a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+                    <a href="#" class="sidebar-collapse-icon">
+                        <!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
                         <i class="entypo-menu"></i>
                     </a>
                 </div>
@@ -80,11 +82,14 @@ if(isset($_SESSION['username']))
             </header>
 
 
+
+
+
             <ul id="main-menu" class="main-menu">
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
                 <li class="active opened active has-sub">
-                    <a href="../index.php">
+                    <a href="index.php">
                         <i class="entypo-gauge"></i>
                         <span class="title">Acceuil</span>
                     </a>
@@ -108,33 +113,7 @@ if(isset($_SESSION['username']))
 
 
 
-                        <li class="has-sub">
-                            <a href="layout-page-transition-fade.html">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="layout-page-transition-fade.html">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout-page-transition-left-in.html">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout-page-transition-right-in.html">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="layout-page-transition-fade-only.html">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
 
                         <li>
                             <a href="../bl/tableau_dette.php">
@@ -147,80 +126,92 @@ if(isset($_SESSION['username']))
                 </li>
 
                 <li class="has-sub">
-                    <a href="ui-panels.html">
+                    <a href="">
                         <i class="entypo-newspaper"></i>
                         <span class="title">Ventes</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="ui-panels.html">
+                            <a href="">
                                 <span class="title">Bon de route</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-panels.html">
+                            <a href="">
                                 <span class="title">Commande Client</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-tiles.html">
+                            <a href="">
                                 <span class="title">Facture Client</span>
                             </a>
                         </li>
                         <li>
-                            <a href="forms-buttons.html">
+                            <a href="">
                                 <span class="title">Bon de livraison</span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui-typography.html">
+                            <a href="">
                                 <span class="title">Journal des Commandes</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="ui-typography.html">
+                            <a href="">
                                 <span class="title">Journal des Ventes</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <span class="title">Gestion des Retours clients</span>
                             </a>
                         </li>
 
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="mailbox.html">
+                    <a href="">
                         <i class="entypo-mail"></i>
                         <span class="title">Achats</span>
 
                     </a>
                     <ul>
                         <li>
-                            <a href="mailbox.html">
+                            <a href="">
                                 <i class="entypo-inbox"></i>
                                 <span class="title">Bon de Commande</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-compose.html">
+                            <a href="">
                                 <i class="entypo-pencil"></i>
                                 <span class="title">Bon de Réception</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="facture_achat/FactureAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Facture d'achat</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des commandes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailbox-message.html">
+                            <a href="facture_achat/journalAchat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Journal des Achats</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="entypo-attach"></i>
+                                <span class="title">Gestion des Retours</span>
                             </a>
                         </li>
 
@@ -228,7 +219,7 @@ if(isset($_SESSION['username']))
                 </li>
 
                 <li class="has-sub">
-                    <a href="forms-main.html">
+                    <a href="">
                         <i class="entypo-doc-text"></i>
                         <span class="title">Fournisseurs</span>
                     </a>
@@ -239,154 +230,99 @@ if(isset($_SESSION['username']))
                             </a>
                         </li>
 
-                        <li class="has-sub">
-                            <a href="">
-                                <span class="title">Edition</span>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Nouveau</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Modifier</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Supprimer</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="title">Imprimer</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
 
-                        <li>
-                            <a href="forms-file-upload.html">
-                                <span class="title">File Upload</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="forms-wysiwyg.html">
-                                <span class="title">Editors</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="tables-main.html">
+                    <a href="">
                         <i class="entypo-window"></i>
                         <span class="title">Articles</span>
                     </a>
                     <ul>
                         <li>
-                            <a href="tables-main.html">
+                            <a href="">
                                 <span class="title">Catégorie</span>
                             </a>
                         </li>
                         <li>
-                            <a href="tables-datatable.html">
-                                <span class="title">Famille</span>
+                            <a href="../articles/marque.php">
+                                <span class="title">Marque</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Emplacement</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="title">Attributs</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="extra-icons.html">
+                    <a href="">
                         <i class="entypo-bag"></i>
                         <span class="title">Stock</span>
                         <span class="badge badge-info badge-roundless">New Items</span>
                     </a>
                     <ul>
                         <li class="has-sub">
-                            <a href="extra-icons.html">
+                            <a href="">
                                 <span class="title">Stock par dépot</span>
                                 <span class="badge badge-success">3</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="extra-icons.html">
+                            <a href="">
                                 <span class="title">Bon d'entree</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-entypo.html">
+                            <a href="">
                                 <span class="title">Bon de sortie</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-glyphicons.html">
+                            <a href="">
                                 <span class="title">Bon de renvoi</span>
                             </a>
                         </li>
                         <li>
-                            <a href="extra-icons-glyphicons.html">
+                            <a href="">
                                 <span class="title">Inventaire</span>
                             </a>
                         </li>
-
-                        </li>
-
-
-
-
-
-
                         <li>
-                            <a href="extra-login.html">
-                                <span class="title">Login</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-register.html">
-                                <span class="title">Register</span>
+                            <a href="">
+                                <span class="title">Mouvement des stocks</span>
                             </a>
                         </li>
 
-
-
-
-
-
-
-
-
-                        <li>
-                            <a href="extra-settings.html">
-                                <span class="title">Settings</span>
-                            </a>
                         </li>
 
 
 
 
-                        <li>
-                            <a href="extra-nestable.html">
-                                <span class="title">Nestable Lists</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-file-tree.html">
-                                <span class="title">File Tree</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="extra-load-progress.html">
-                                <span class="title">Load Progress</span>
-                            </a>
-                        </li>
+
+
                     </ul>
                 </li>
 
 
             </ul>
+
+
+
+
+
+
+
+
 
         </div>
 
@@ -395,16 +331,15 @@ if(isset($_SESSION['username']))
     <div class="main-content">
 
 
+        <hr/>
 
-        <hr />
-
-        <ol class="breadcrumb bc-3" >
+        <ol class="breadcrumb bc-3">
             <li>
-                <a href="index.html"><i class="fa-home"></i>Acceuil</a>
+                <a href="../index.html"><i class="fa-home"></i>Acceuil</a>
             </li>
             <li>
 
-                <a href="tables-main.html">Clients</a>
+                <a href="clients/liste_client.php">Clients</a>
             </li>
             <li class="active">
 
@@ -414,42 +349,40 @@ if(isset($_SESSION['username']))
 
         <h2>Liste des clients</h2>
 
-        <br />
+        <br/>
 
         <script type="text/javascript">
-            jQuery( document ).ready( function( $ ) {
-                var $table1 = jQuery( '#table-1' );
+            jQuery(document).ready(function ($) {
+                var $table1 = jQuery('#table-1');
 
                 // Initialize DataTable
-                $table1.DataTable( {
+                $table1.DataTable({
                     "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                     "bStateSave": true
                 });
 
                 // Initalize Select Dropdown after DataTables is created
-                $table1.closest( '.dataTables_wrapper' ).find( 'select' ).select2( {
+                $table1.closest('.dataTables_wrapper').find('select').select2({
                     minimumResultsForSearch: -1
                 });
-            } );
+            });
         </script>
 
 
-
-        <br />
-
+        <br/>
 
 
         <script type="text/javascript">
-            jQuery( window ).load( function() {
-                var $table2 = jQuery( "#table-2" );
+            jQuery(window).load(function () {
+                var $table2 = jQuery("#table-2");
 
                 // Initialize DataTable
-                $table2.DataTable( {
+                $table2.DataTable({
                     "sDom": "tip",
                     "bStateSave": false,
                     "iDisplayLength": 8,
                     "aoColumns": [
-                        { "bSortable": false },
+                        {"bSortable": false},
                         null,
                         null,
                         null,
@@ -459,51 +392,59 @@ if(isset($_SESSION['username']))
                 });
 
                 // Highlighted rows
-                $table2.find( "tbody input[type=checkbox]" ).each(function(i, el) {
+                $table2.find("tbody input[type=checkbox]").each(function (i, el) {
                     var $this = $(el),
                         $p = $this.closest('tr');
 
-                    $( el ).on( 'change', function() {
+                    $(el).on('change', function () {
                         var is_checked = $this.is(':checked');
 
-                        $p[is_checked ? 'addClass' : 'removeClass']( 'highlight' );
-                    } );
-                } );
+                        $p[is_checked ? 'addClass' : 'removeClass']('highlight');
+                    });
+                });
 
                 // Replace Checboxes
-                $table2.find( ".pagination a" ).click( function( ev ) {
+                $table2.find(".pagination a").click(function (ev) {
                     replaceCheckboxes();
-                } );
-            } );
+                });
+            });
 
             // Sample Function to add new row
             var giCount = 1;
 
             function fnClickAddRow() {
-                jQuery('#table-2').dataTable().fnAddData( [ '<div class="checkbox checkbox-replace"><input type="checkbox" /></div>', giCount + ".1", giCount + ".2", giCount + ".3", giCount + ".4" ] );
+                jQuery('#table-2').dataTable().fnAddData(['<div class="checkbox checkbox-replace"><input type="checkbox" /></div>', giCount + ".1", giCount + ".2", giCount + ".3", giCount + ".4"]);
                 replaceCheckboxes(); // because there is checkbox, replace it
                 giCount++;
             }
+
+
+
         </script>
 
 
 
 
+
+
+
         <?php
+
+        $j=0;
         /* Attempt MySQL server connection. Assuming you are running MySQL
         server with default setting (user 'root' with no password) */
         $link = mysqli_connect("localhost", "root", "", "dap2");
-
+        $ref;
         // Check connection
-        if($link === false){
+        if ($link === false) {
             die("ERROR: Could not connect. " . mysqli_connect_error());
         }
 
         // Attempt select query execution
         $sql = "SELECT * FROM clients";
-        if($result = mysqli_query($link, $sql)){
-            if(mysqli_num_rows($result) > 0){
-                echo "<table class=\"table table-bordered table-striped datatable\" id=\"table-2\">";
+        if ($result = mysqli_query($link, $sql)) {
+            if (mysqli_num_rows($result) > 0) {
+                echo "<table id='table-2' class=\"table table-bordered table-striped datatable\" >";
                 echo " <thead>
             <tr>
                 <th>
@@ -531,19 +472,19 @@ if(isset($_SESSION['username']))
                 echo "<th>N-Art</th>";
                 echo "<th>Dette</th>";
                 echo "<th>Edition</th>";
-                 echo "</tr>";
-                 echo"</thead>" ;
-                 $i=0 ;
-                while($row = mysqli_fetch_array($result)){
+                echo "</tr>";
+                echo "</thead>";
 
+                while ($row = mysqli_fetch_array($result)) {
+$i=0;
                     echo "<tr>";
-                    echo"<td>
+                    echo "<td>
                     <div class=\"checkbox checkbox-replace\">
                         <input type=\"checkbox\" id=\"chk-1\">
                     </div>
-                </td>" ;
-                    echo "<td >" . $row['ref_client'] . "</td>";
-                    echo "<td>" . $row['Societe'] . "</td>";
+                </td>";
+                    echo "<td>" . $row['ref_client'] . "</td>";
+                    echo "<td >" . $row['Societe'] . "</td>";
                     echo "<td>" . $row['Societe_officielle'] . "</td>";
                     echo "<td>" . $row['telephone_fix'] . "</td>";
                     echo "<td>" . $row['fax'] . "</td>";
@@ -560,60 +501,67 @@ if(isset($_SESSION['username']))
                     echo "<td>" . $row['N_ART'] . "</td>";
                     echo "<td>" . $row['dette'] . "</td>";
 
-                    echo("<td><a href=\"#\" class=\"btn btn-default btn-sm btn-icon icon-left\">"
-                        ."<i class=\"entypo-pencil\"></i> Modifier</a>"
-
-                    ."<a href=\"#\" class=\"btn btn-danger btn-sm btn-icon icon-left\"><i class=\"entypo-cancel\"></i>Supprimer </a>"
+                    echo("<td><a href=\"fiche-client.php\" class=\"btn btn-default btn-sm btn-icon icon-left\">"
+                        . "<i class=\"entypo-pencil\"></i> Modifier</a>"
 
 
+                        . "<a href=\"delete.php?ref=$row[ref_client];?>\" class=\"btn btn-danger btn-sm btn-icon icon-left\"><i class=\"entypo-cancel\"></i>Supprimer </a>"
 
 
+                        . "<a href=\"\"  class=\"btn btn-info btn-sm btn-icon icon-left\  ><i class=\"entypo-print\"></i>Imprimer</a>"
 
 
+                        . "</td>");
 
-                    ."<a href=\"#\" class=\"btn btn-info btn-sm btn-icon icon-left\"><i class=\"entypo-info\"></i>Imprimer</a>"
-
-
-
-                ."</td>");
-                    $i++ ;
 
                     echo "</tr>";
 
 
                 }
 
-
+$i++ ;
                 echo "</table>";
                 // Free result set
                 mysqli_free_result($result);
-            } else{
+            } else {
                 echo "No records matching your query were found.";
             }
-        } else{
+        } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }
 
         // Close connection
         mysqli_close($link);
+        }
         ?>
+
 
         <?php
-        }else
 
-            header("Location:../login.php");
+
+
+
+
+
 
         ?>
+
+
+
 
 
         <br />
 
-        <button type="button" class="btn btn-gold btn-icon"><a href="cree-client.php">
+        <button type="button" class="btn btn-gold btn-icon" ><a href="cree-client.php">
             Ajouter  Client
             <i class="entypo-user-add"></i>
         </button></a>
 
 
+        <button type="button" class="btn btn-gold btn-icon" id="print"><a href="">
+                Imprimer
+                <i class="entypo-user-add"></i>
+        </button></a>
 
         <br />
         <br />
@@ -636,12 +584,31 @@ if(isset($_SESSION['username']))
         <!-- Footer -->
         <footer class="main">
 
-            &copy; 2019 <strong>ComInTec</strong>  <a href="http://laborator.co" target="_blank">Bureau de consulting et formation en Informatique</a>
+            &copy; 2019 <strong>ComInTec</strong>  <a href="" target="_blank">Bureau de consulting et formation en Informatique</a>
 
         </footer>
     </div>
 
+    <script>
 
+
+       $('#print').click(function(){
+
+            //var printme =document.getElementById('table-2') ;
+            var printme =document.getElementById('table-2') ;
+            var wme =window.open("","","width=900,height=700");
+            wme.document.write(printme.outerHTML) ;
+            wme.document.close();
+            wme.focus();
+            wme.print();
+            wme.close();
+
+
+
+        })
+
+
+    </script>
 
 
 
@@ -660,12 +627,11 @@ if(isset($_SESSION['username']))
 
 
 
-
 <!-- Imported styles on this page -->
 <link rel="stylesheet" href="assets/js/datatables/datatables.css">
 <link rel="stylesheet" href="assets/js/select2/select2-bootstrap.css">
 <link rel="stylesheet" href="assets/js/select2/select2.css">
-
+<link rel="stylesheet" type="text/css" href="assets/js/print.css" media="print" />
 <!-- Bottom scripts (common) -->
 <script src="assets/js/gsap/TweenMax.min.js"></script>
 <script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
@@ -683,7 +649,7 @@ if(isset($_SESSION['username']))
 
 <!-- JavaScripts initializations and stuff -->
 <script src="assets/js/neon-custom.js"></script>
-
+<script src="assets/js/printThis.js"></script>
 
 <!-- Demo Settings -->
 <script src="assets/js/neon-demo.js"></script>

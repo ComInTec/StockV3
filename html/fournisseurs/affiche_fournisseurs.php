@@ -164,7 +164,10 @@ if (mysqli_num_rows($req))
 <td >Credit actuel:</td>
 <td >Supprimer:</td>
 </tr>
-		<?php	  
+
+
+
+    <?php
 		while($row=mysqli_fetch_array($req))
 		{
 	    $ref = $row[0];
