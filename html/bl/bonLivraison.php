@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -364,7 +364,7 @@ if(isset($_GET["id_fachat"]))
 
 
 
-        <div class="col-md-6" id="tab1">
+        <div class="col-md-6">
 
             <ul class="nav nav-tabs bordered"><!-- available classes "bordered", "right-aligned" -->
                 <li class="active">
@@ -388,7 +388,7 @@ if(isset($_GET["id_fachat"]))
 
             </ul>
 
-            <div class="tab-content" id="tab">
+            <div class="tab-content">
                 <div class="tab-pane active" id="En-tete">
 
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 600px;">
@@ -398,8 +398,8 @@ if(isset($_GET["id_fachat"]))
                             <table id='table-2' class="table table-bordered table-striped datatable>
                                 <thead>
                                 <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
 
                             </tr>
                             </thead>
@@ -598,14 +598,15 @@ FROM `facture_achat` left outer join fournisseurs on facture_achat.`ref_fourniss
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Reference</th>
+                            <th>Code</th>
                             <th>Designation</th>
                             <th>Quantité</th>
-                            <th>Unité</th>
-                            <th>Prix Unitaire HT</th>
-                            <th>Remise %</th>
-                            <th>Montant HT</th>
-                            <th>TVA%</th>
+
+                            <th>Prix Unitaire TTC</th>
+                            <th>Montant TTC</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
 
                         </tr>
                         </thead>
@@ -640,7 +641,7 @@ FROM `facture_achat` left outer join fournisseurs on facture_achat.`ref_fourniss
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>Total TTC</td>
+                            <td>Remise %</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -650,7 +651,37 @@ FROM `facture_achat` left outer join fournisseurs on facture_achat.`ref_fourniss
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>Net a payer</td>
+                            <td>Net a payer HT</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>TVA</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>T.V.A</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Total TTC</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -674,10 +705,6 @@ FROM `facture_achat` left outer join fournisseurs on facture_achat.`ref_fourniss
 
 
 
-        <button type="button" class="btn btn-gold btn-icon" id="print"><a href="">
-                Imprimer
-                <i class="entypo-user-add"></i>
-        </button></a>
 
 
 
@@ -687,26 +714,6 @@ FROM `facture_achat` left outer join fournisseurs on facture_achat.`ref_fourniss
 
 
 
-    <script>
-
-
-        $('#print').click(function(){
-
-            //var printme =document.getElementById('table-2') ;
-            var printme =document.getElementById('tab'1) ;
-            var wme =window.open("","","width=900,height=700");
-            wme.document.write(printme.outerHTML) ;
-            wme.document.close();
-            wme.focus();
-            wme.print();
-            wme.close();
-
-
-
-        })
-
-
-    </script>
 
 
 

@@ -180,7 +180,7 @@ $date= date("d/m/Y");
                     </a>
                     <ul>
                         <li>
-                            <a href="">
+                            <a href="achat/bonCommande.php">
                                 <i class="entypo-inbox"></i>
                                 <span class="title">Bon de Commande</span>
                             </a>
@@ -192,7 +192,7 @@ $date= date("d/m/Y");
                             </a>
                         </li>
                         <li>
-                            <a href="facture_achat/FactureAchat.php">
+                            <a href="facture_achat/facture_achat.php">
                                 <i class="entypo-attach"></i>
                                 <span class="title">Facture d'achat</span>
                             </a>
